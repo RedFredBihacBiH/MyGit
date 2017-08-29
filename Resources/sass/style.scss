@@ -1,0 +1,546 @@
+/* --------------------------------------- 
+------------------SASS SETUP--------------
+------------------------------------------ */
+
+$font-stack: 'Lato',
+'Arial',
+sans-serif;
+$font-color:#555;
+$orang-color:#e67e22;
+$l-orang-color:#e99041;
+$d-orang-color:#cf6d17;
+$b-color: #f4f4f4;
+
+/* ---------------------------------------
+------------------STANDARD SETUP----------
+------------------------------------------ */
+
+* {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	list-style: none;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	background-color: #fff;
+	color: #555;
+	font-family: 'Lato', 'Arial', sans-serif;
+	font-weight: 300;
+	font-size: 20px;
+	text-rendering: optimizeLegibility;
+	/*perfektno renderiranje*/
+	overflow-x: hidden;
+}
+
+
+/* ---------------------------------------
+------------------REUSABLE COMPONENTS-----
+------------------------------------------ */
+
+.row {
+	width: 1140px;
+	margin: 0 auto;
+}
+
+section {
+	padding: 80px 0;
+}
+
+.box {
+	padding: 1%;
+}
+
+.clearfix {
+	zoom: 1
+}
+
+.clearfix:after {
+	content: ' ';
+	clear: both;
+	display: block;
+	height: 0;
+	visibility: hidden;
+}
+
+
+/* --------------------------------------- 
+------------------TYPOGRAPHY-------------- 
+------------------------------------------ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 300;
+	text-transform: uppercase;
+}
+
+h1 {
+	margin-top: 0;
+	margin-bottom: 20px;
+	color: #fff;
+	font-size: 250%;
+	word-spacing: 4px;
+	letter-spacing: 1px;
+}
+
+h2 {
+	font-size: 180%;
+	word-spacing: 2px;
+	text-align: center;
+	margin-bottom: 30px;
+	letter-spacing: 1px;
+}
+
+h2:after {
+	display: block;
+	height: 2px;
+	width: 100px;
+	background-color: $orang-color;
+	content: "";
+	margin: 0 auto;
+	margin-top: 30px;
+}
+
+h3 {
+	font-size: 110%;
+	margin-bottom: 15px;
+}
+
+
+/* --------------------------------------- 
+-----------------BUTTON------------------- 
+------------------------------------------ */
+
+.btn:link,
+.btn:visited,
+input[type=submit] {
+	display: inline-block;
+	padding: 10px 30px;
+	font-weight: 300;
+	text-decoration: none;
+	border-radius: 200px;
+	-webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
+	transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+.btn:hover,
+.btn:active,
+input[type=submit]:hover,
+input[type=submit]:active {
+	background-color: $d-orang-color;
+}
+
+.btn-full:link,
+.btn-full:visited,
+input[type=submit] {
+	background-color: $orang-color;
+	border: 1px solid $orang-color;
+	color: #fff;
+	margin-right: 15px;
+}
+
+.btn-full:hover,
+.btn-full:active,
+input[type=submit]:hover,
+input[type=submit]:active {
+	background-color: $d-orang-color;
+	border: 1px solid $d-orang-color;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+	border: 1px solid $orang-color;
+	color: $orang-color;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+	border: 1px solid $d-orang-color;
+	color: #fff;
+}
+
+
+/* ---------------------------------------
+------------------NAV MAIN----------------
+------------------------------------------ */
+
+.logo {
+	height: 100px;
+	width: auto;
+	float: left;
+	margin-top: 20px;
+}
+
+.main-nav {
+	float: right;
+	list-style: none;
+	margin-top: 55px;
+}
+
+.main-nav li {
+	display: inline-block;
+	margin-left: 40px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+	padding: 8px 0;
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 90%;
+	border-bottom: 3px solid transparent;
+	-webkit-transition-delay: border-bottom 0.3s;
+	transition-delay: border-bottom 0.3s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+	border-bottom: 3px solid $orang-color;
+}
+
+
+/* ---------------------------------------
+------------------ICON--------------------
+------------------------------------------ */
+
+.icon-big {
+	font-size: 350%;
+	display: block;
+	color: $orang-color;
+	margin-bottom: 10px;
+}
+
+.icon-small {
+	display: inline-block;
+	width: 30px;
+	text-align: center;
+	color: $orang-color;
+	font-size: 120%;
+	margin-right: 10px;
+	/*tajne za poravnanje ikone sa tekstom*/
+	line-height: 120%;
+	vertical-align: middle;
+	margin-top: -5px;
+}
+
+
+/* ---------------------------------------
+------------------LINK--------------------
+------------------------------------------ */
+
+a:link,
+a:visited {
+	color: $orang-color;
+	text-decoration: none;
+	padding-bottom: 1px;
+	border-bottom: 1px solid $orang-color;
+	-webkit-transition: border-bottom .2s, color .2s;
+	transition: border-bottom .2s, color .2s;
+}
+
+a:hover,
+a:active {
+	color: #555;
+	border-bottom: 1px solid transparent;
+}
+
+
+/* ---------------------------------------
+------------------HEADER------------------
+------------------------------------------ */
+
+header {
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(img/hero.jpg);
+	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/hero.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	height: 100vh;
+}
+
+.hero-text-box {
+	position: absolute;
+	width: 1140px;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+
+/* ---------------------------------------
+------------------SECTION 1---------------
+------------------------------------------ */
+
+.long-copy {
+	line-height: 145%;
+	width: 70%;
+	margin-left: 15%;
+}
+
+.box p {
+	font-size: 90%;
+	line-height: 145%;
+}
+
+.section-features .long-copy {
+	margin-bottom: 30px;
+}
+
+
+/* ---------------------------------------
+------------------SECTION 2---------------
+------------------------------------------ */
+
+.section-meals {
+	padding: 0;
+}
+
+.meals-showcase {
+	list-style: none;
+	width: 100%;
+}
+
+.meals-showcase li {
+	display: block;
+	float: left;
+	width: 25%;
+}
+
+.meal-photo {
+	width: 100%;
+	margin: 0;
+	overflow: hidden;
+	background-color: #000;
+}
+
+.meal-photo img {
+	opacity: 0.7;
+	width: 100%;
+	height: auto;
+	-webkit-transform: scale(1.15);
+	transform: scale(1.15);
+	-webkit-transition: opacity 0.5s, -webkit-transform .5s;
+	transition: opacity 0.5s, -webkit-transform .5s;
+	transition: transform .5s, opacity 0.5s;
+	transition: transform .5s, opacity 0.5s, -webkit-transform .5s;
+}
+
+.meal-photo img:hover {
+	opacity: 1;
+	-webkit-transform: scale(1.03);
+	transform: scale(1.03);
+}
+
+
+/* ---------------------------------------
+------------------SECTION 3---------------
+------------------------------------------ */
+
+.step-boxs:first-child {
+	margin-top: 30px;
+	text-align: right;
+	padding-right: 3%;
+}
+
+.step-boxs:last-child {
+	margin-top: 70px;
+	padding-left: 3%;
+	float: left;
+}
+
+.app-screen {
+	width: 40%;
+}
+
+.works-step {
+	margin-bottom: 50px;
+}
+
+.works-step:last-of-type {
+	margin-bottom: 80px;
+}
+
+.works-step div {
+	color: $orang-color;
+	border: 2px solid $orang-color;
+	display: inline-block;
+	border-radius: 50%;
+	height: 55px;
+	width: 55px;
+	text-align: center;
+	padding: 5px;
+	float: left;
+	font-size: 150%;
+	margin-right: 25px;
+}
+
+.btn-app:link,
+.btn-app:visited {
+	border-bottom: none;
+}
+
+.btn-app img {
+	height: 50px;
+	width: auto;
+	margin-right: 10px;
+}
+
+.section-works {
+	background-color: $b-color;
+}
+
+
+/* ---------------------------------------
+------------------SECTION 4---------------
+------------------------------------------ */
+
+.box img {
+	width: 100%;
+	height: auto;
+	margin-bottom: 15px;
+}
+
+.city-feature {
+	margin-bottom: 5px;
+}
+
+
+/* ---------------------------------------
+------------------SECTION 5---------------
+------------------------------------------ */
+
+.section-testimonials {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/back-customers.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	color: #fff;
+}
+
+blockquote {
+	padding: 2%;
+	font-style: italic;
+	line-height: 145%;
+	margin-top: 40px;
+	position: relative;
+}
+
+blockquote:before {
+	content: "\201C";
+	font-size: 400%;
+	display: block;
+	position: absolute;
+	top: -5px;
+	left: -5px;
+}
+
+cite {
+	font-size: 90%;
+	margin-top: 25px;
+	display: block;
+}
+
+cite img {
+	height: 45px;
+	border-radius: 50%;
+	margin-right: 10px;
+	vertical-align: middle;
+}
+
+
+/* ---------------------------------------
+------------------SECTION 6---------------
+------------------------------------------ */
+
+.section-plans {
+	background-color: $b-color;
+}
+
+.plan-box {
+	background-color: #fff;
+	border-radius: 5px;
+	width: 90%;
+	margin-left: 5%;
+	box-shadow: 0 2px 2px #efefef;
+}
+
+.plan-box div {
+	padding: 15px;
+	border-bottom: 1px solid #e8e8e8;
+}
+
+.plan-box div:first-child {
+	background-color: #fcfcfc;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+}
+
+.plan-box div:last-child {
+	text-align: center;
+	border: none;
+}
+
+.plan-price {
+	font-size: 300%;
+	font-weight: 100;
+	margin-bottom: 10px;
+	color: $orang-color;
+}
+
+.plan-price span {
+	font-size: 60%;
+	font-weight: 300;
+}
+
+.plan-price-meal {
+	font-size: 80%;
+}
+
+.plan-box ul {
+	list-style: none;
+}
+
+.plan-box ul li {
+	padding: 5px 0;
+}
+
+
+/* ---------------------------------------
+------------------SECTION 7---------------
+------------------------------------------ */
+
+.contact-form {
+	width: 60%;
+	height: auto;
+	margin: 0 auto;
+}
+
+input[type=text],
+input[type=email],
+select,
+textarea {
+	width: 100%;
+	padding: 7px;
+	border-radius: 3px;
+	border: 1px solid #ccc;
+}
+
+textarea {
+	height: 100px;
+}
+
+input[type=checkbox] {
+	margin: 10px 5px 10px 0;
+}
+
+*:focus {
+	outline: none;
+}
